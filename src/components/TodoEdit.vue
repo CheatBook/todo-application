@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="row">
-
       <div class="col-2 list-format">
         <label class="font-weight-bold" for="taskName"> タスク名： </label>
       </div>
@@ -69,7 +68,6 @@
           Add
         </button>
       </div>
-
     </div>
   </div>
 </template>

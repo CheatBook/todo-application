@@ -3,6 +3,8 @@
     <header>
       <router-link
         class="btn btn-outline-info btn-lg"
+        v-shortkey.once="['alt', '1']"
+        @shortkey.native="navigate('/todo-edit')"
         active-class="list-active"
         exact
         to="/todo-edit"
@@ -10,6 +12,8 @@
       >
       <router-link
         class="btn btn-outline-info btn-lg"
+        v-shortkey.once="['alt', '2']"
+        @shortkey.native="navigate('/todo-list')"
         active-class="list-active"
         exact
         to="/todo-list"
@@ -23,6 +27,11 @@
 <script>
 export default {
   name: "App",
+  methods: {
+    navigate(to) {
+      this.$router.push(to);
+    },
+  },
 };
 </script>
 

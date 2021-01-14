@@ -9,7 +9,7 @@
         <div class="col-4"></div>
       </div>
     </div>
-    <div v-else>データがありません。</div>
+    <h1 v-else>データがありません。</h1>
     <div class="row" v-for="todoInfo in results" :key="todoInfo.taskId">
       <div class="col-3 border">
         <div>{{ todoInfo.taskName }}</div>
@@ -51,17 +51,6 @@ export default {
     return {
       message: "",
       results: [],
-
-      columns: [
-        { label: "タスク名", field: "taskName" },
-        { label: "優先度", field: "priority" },
-        { label: "ステータス", field: "todoStatusInfo" },
-        { label: "開始予定時間", field: "workingStartPlanTime" },
-        { label: "完了予定時間", field: "workingCompletePlanTime" },
-        { label: "備考", field: "note" },
-        { label: "", field: "buttons" },
-      ],
-      rows: [],
     };
   },
   created() {

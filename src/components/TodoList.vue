@@ -71,7 +71,7 @@ export default {
     },
     deleteTodoListData: function (taskId, taskName) {
       axios
-        .get(`http://localhost:8081/todo/delete/${taskId}`)
+        .delete(`http://localhost:8081/todo/${taskId}`)
         .then(() => {
           this.message = `タスク【${taskName}】を削除しました`;
           this.showTodoListData();

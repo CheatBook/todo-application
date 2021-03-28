@@ -59,7 +59,7 @@ export default {
   methods: {
     showTodoListData: function () {
       axios
-        .get("http://localhost:8081/todo/list/")
+        .get("http://localhost:8081/todo")
         .then((response) => {
           this.results = response.data;
           this.rows = response.data;

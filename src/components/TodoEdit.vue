@@ -122,7 +122,7 @@ export default {
   methods: {
     addTodoData: function () {
       axios
-        .post("http://localhost:8081/todo/registration", {
+        .post("http://localhost:8081/todo", {
           taskName: this.taskName,
           priority: this.priority,
           workingStartPlanTime: this.workingStartPlanTime,
